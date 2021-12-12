@@ -9,7 +9,7 @@ app.set("views", "views");
 
 app.use(morgan("dev"));
 
-app.use(express.static("public"));
+app.use("/scavengerHunt/", express.static(__dirname + "/public"));
 app.use(express.urlencoded());
 
 app.get("/scavengerHunt/", (req, res) => {
